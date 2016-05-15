@@ -29,6 +29,9 @@ window.onresize = window.onload = function() {
 }
 
 var paper;
+var userListData = [];
+
+
 
 $(document).ready(function() {
 
@@ -36,12 +39,9 @@ $(document).ready(function() {
 
     // Populate the user table on initial page load
     populateTable();
-    draw();
+    
 
-
-});
-function draw(){
- paper = Snap("#svg");
+     paper = Snap("#svg");
 
 
 var i;
@@ -63,7 +63,12 @@ for(i=0;i<userListData.length;i+=1){
         }
 
 
-}
+
+});
+
+
+
+
 
 </script>
 
