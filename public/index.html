@@ -9,7 +9,7 @@
 
 
 <script type="text/javascript">
-
+function myFunc(){
 var s = Snap("#svg");
 
 // Circle with 80px radius
@@ -39,6 +39,7 @@ ellipse.attr({
   strokeOpacity: .2,
   strokeWidth: 10
 });
+}
 
 
 
@@ -48,8 +49,8 @@ ellipse.attr({
 </head>
 
 
-<body>
-	
+<body onload="myFunc()">
+
     <svg id="svg"></svg>
 </body>
 </html>
