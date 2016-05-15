@@ -11,6 +11,42 @@ $(document).ready(function() {
     populateTable();
 
 
+
+
+var width,height;
+window.onresize = window.onload = function() {
+    width = this.innerWidth;
+    height = this.innerHeight;
+}
+
+var paper;
+ paper = Snap("#svg");
+
+
+var i;
+console.log("test");
+for(i=0;i<userListData.length;i+=1){
+
+        var c = userListData[i];
+
+            console.log(c);
+            delete c["_id"];
+
+
+
+        // Circle with 80px radius
+            var circle = paper.circle(0,0,0);
+
+            circle.attr(c);
+
+        }
+
+
+
+
+
+
+
       // Username link click
     $('#userList table tbody').on('click', 'td a.linkshowuser', showUserInfo);
 
