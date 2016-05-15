@@ -18,11 +18,22 @@ svg { position:fixed; top:0; left:0; height:100%; width:100% }
 
 
 <script>
-function myFunc(){
+
+var width,height;
+window.onresize = window.onload = function() {
+    width = this.innerWidth;
+    height = this.innerHeight;
+    document.body.innerHTML = width + 'x' + height; // For demo purposes
+}
+
+function draw(){
+
+
+
 var s = Snap("#svg");
 
 // Circle with 80px radius
-var circle = s.circle(90,120,80);
+var circle = s.circle(width,120,80);
 // Square with 160px side width
 var square = s.rect(210,40,160,160);
 // Ellipse with 80px vertical radius and 50px horizontal radius
@@ -48,6 +59,11 @@ ellipse.attr({
   strokeOpacity: .2,
   strokeWidth: 10
 });
+
+
+
+
+
 }
 
 
@@ -58,7 +74,7 @@ ellipse.attr({
 </head>
 
 
-<body onload="myFunc()">
+<body onload="draw()">
 
     <svg id="svg"></svg>
 </body>
