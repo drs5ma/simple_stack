@@ -68,9 +68,13 @@ function movefunc(ev, x, y){
         
 if(  (!isNaN(x)) &&  (!isNaN(y))   ){
 
-        
+        console.log(x);
+
+        console.log(y);
+
+        console.log(ev);
+
         newuser = {
-	      timestamp: Date.now(),
               cx: x,
               cy: y,
               r: 24,
