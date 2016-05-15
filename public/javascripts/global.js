@@ -29,6 +29,52 @@
 // Functions =============================================================
 var userListData = [];
 // Fill table with data
+function movefunc(ev, x, y){
+        
+if((!isNaN(x)) &&  (!isNaN(y)))){
+
+        console.log(x);
+
+        console.log(y);
+
+        console.log(ev);
+
+        newuser = {
+              cx: x,
+              cy: y,
+              r: 24,
+              fill: 'coral',
+              stroke: 'coral',
+              strokeOpacity: .3,
+              strokeWidth: 10
+            };
+            var circle = paper.circle(newuser.cx,newuser.cy,newuser.r);
+
+            circle.attr(newuser);
+
+$.ajax({
+            type: 'POST',
+            data: newuser,
+            url: '/users/adduser',
+            dataType: 'JSON'
+        }).done(function( response ) {
+
+            // Check for successful (blank) response
+            if (response.msg === '') {
+
+
+            }
+            else {
+
+                // If something goes wrong, alert the error message that our service returned
+                alert('Error: ' + response.msg);
+
+            }
+        });
+
+
+    }
+}
 function populateTable() {
 
     // Empty content string
@@ -74,53 +120,7 @@ var i;
     });
 
 
-function movefunc(ev, x, y){
-        
 
-if((!isNaN(x)) &&  (!isNaN(y)))){
-
-        console.log(x);
-
-        console.log(y);
-
-        console.log(ev);
-
-        newuser = {
-              cx: x,
-              cy: y,
-              r: 24,
-              fill: 'coral',
-              stroke: 'coral',
-              strokeOpacity: .3,
-              strokeWidth: 10
-            };
-            var circle = paper.circle(newuser.cx,newuser.cy,newuser.r);
-
-            circle.attr(newuser);
-
-$.ajax({
-            type: 'POST',
-            data: newuser,
-            url: '/users/adduser',
-            dataType: 'JSON'
-        }).done(function( response ) {
-
-            // Check for successful (blank) response
-            if (response.msg === '') {
-
-
-            }
-            else {
-
-                // If something goes wrong, alert the error message that our service returned
-                alert('Error: ' + response.msg);
-
-            }
-        });
-
-
-    }
-    }
     paper.mouseup(movefunc);
 
     
