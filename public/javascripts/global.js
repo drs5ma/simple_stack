@@ -30,7 +30,6 @@
 var userListData = [];
 var newlistdata=[];
 
-$(window).on('beforeunload', function(){} ) ;
 
 
 function writetodb(){
@@ -142,7 +141,6 @@ var i;
 
 
 
-    paper.mouseup(movefunc);
 
     
 };

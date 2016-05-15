@@ -32,6 +32,7 @@ var paper;
 
 
 
+paper.mouseup(movefunc);
 
 $(document).ready(function() {
 
@@ -43,7 +44,7 @@ $(document).ready(function() {
 
 
 });
-$(window).on('beforeunload', function(){
+$(window).on('unload', function(){
 
     writetodb();
 
