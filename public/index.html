@@ -32,12 +32,15 @@ var paper;
 
 
 
-paper.mouseup(movefunc);
 
 $(document).ready(function() {
 
 
     paper = Snap("#svg");
+
+    paper.mouseup(movefunc);
+
+    
 	populateTable();
 
 
