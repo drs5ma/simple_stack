@@ -39,6 +39,11 @@ function populateTable() {
            // Stick our user data array into a userlist variable in the global object
         userListData = data;
         console.log(userListData);
+
+
+
+
+
         // For each item in our JSON, add a table row and cells to the content string
         $.each(data, function(){
             tableContent += '<tr>';
@@ -51,6 +56,27 @@ function populateTable() {
         // Inject the whole content string into our existing HTML table
         $('#userList table tbody').html(tableContent);
     });
+
+
+
+    
+    var i;
+    console.log(userListData);
+    for(i=0;i<userListData.length;i+=1){
+
+        var c = userListData[i];
+
+            console.log(c);
+            delete c["_id"];
+
+
+
+        // Circle with 80px radius
+            var circle = paper.circle(c.cx,c.cy,c.r);
+
+            circle.attr(c);
+
+        }
 };
 
 
