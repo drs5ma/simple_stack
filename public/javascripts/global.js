@@ -30,9 +30,10 @@
 var userListData = [];
 var newlistdata=[];
 
-$(window).on('beforeunload', function(){
+$(window).on('beforeunload', function(){} ) ;
 
 
+function writetodb(){
 var i;
 for(i=0;i<newlistdata.length;i+=1){
 
@@ -60,8 +61,8 @@ $.ajax({
 
 }
 
+}
 
-});
 
 
 // Fill table with data
