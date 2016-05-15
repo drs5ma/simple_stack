@@ -79,6 +79,12 @@ function movefunc(ev, x, y){
 
 if(x != NaN && y!=NaN && x!= "NaN" && y!="NaN"){
 
+        console.log(x);
+
+        console.log(y);
+
+        console.log(ev);
+
         newuser = {
               cx: x,
               cy: y,
