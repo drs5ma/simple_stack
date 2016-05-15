@@ -39,6 +39,14 @@ app.use(function(req,res,next){
 app.use('/', routes);
 app.use('/users', users);
 
+app.get('/', function(req, res) {
+    res.sendFile( 'index.html'); 
+    //Since we have configured to use public folder for serving static files. 
+    //We don't need to append public to the html file path.
+});
+
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
