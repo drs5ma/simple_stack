@@ -27,7 +27,7 @@
 //});
 
 // Functions =============================================================
-
+var userListData = [];
 // Fill table with data
 function populateTable() {
 
@@ -59,7 +59,7 @@ function populateTable() {
 
 
 
-    
+
     var i;
     console.log(userListData);
     for(i=0;i<userListData.length;i+=1){
