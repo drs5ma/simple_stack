@@ -26,39 +26,31 @@ window.onresize = window.onload = function() {
 }
 
 function draw(){
-
-
-
 var paper = Snap("#svg");
 
-// Circle with 80px radius
-var circle = paper.circle(width,120,80);
-// Square with 160px side width
-var square = paper.rect(210,40,160,160);
-// Ellipse with 80px vertical radius and 50px horizontal radius
-var ellipse = paper.ellipse(460,120,50,80);
 
-circle.attr({
-  cx: 0,
-  fill: 'coral',
-  stroke: 'coral',
-  strokeOpacity: .3,
-  strokeWidth: 10
-});
+var i;
+for(i=0;i<userListData.length;i+=1){
+
+	var c = userListData[i];
+	delete c["_id"];
+
+
+
+// Circle with 80px radius
+var circle = paper.circle(0,0,0);
+
+	circle.attr(c);
+
+}
+
+
+
+
+
+
+
  
-square.attr({
-  fill: 'lightblue',
-  stroke: 'lightblue',
-  strokeOpacity: .3,
-  strokeWidth: 10
-});
- 
-ellipse.attr({
-  fill: 'mediumturquoise',
-  stroke: 'mediumturquoise',
-  strokeOpacity: .2,
-  strokeWidth: 10
-});
 
 
 
