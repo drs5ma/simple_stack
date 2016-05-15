@@ -76,6 +76,9 @@ var i;
 
 function movefunc(ev, x, y){
         
+
+if(x != NaN && y!=NaN){
+
         newuser = {
               cx: x,
               cy: y,
@@ -108,6 +111,9 @@ $.ajax({
 
             }
         });
+
+
+    }
     }
     paper.mouseup(movefunc);
 
