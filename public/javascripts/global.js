@@ -125,15 +125,21 @@ function populateTable() {
 
         var dbentry = userListData[i];
 
-	console.log(dbentry);
-        delete dbentry["_id"];
-	console.log(dbentry);
+	//console.log(dbentry);
+        //delete dbentry["_id"];
+	//console.log(dbentry);
 
 
         // Circle with 80px radius
             var circle = paper.circle(dbentry.cx,dbentry.cy,dbentry.r);
 
+	    
+	    var t = dbentry.timestamp;
+	    delete dbentry['timestamp'];
             circle.attr(dbentry);
+	    circle.attr({
+		    id:String(t)
+			});
 
         }
 
