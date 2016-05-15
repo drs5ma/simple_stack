@@ -74,7 +74,42 @@ var i;
     });
 
 
+function movefunc(ev, x, y){
+        
+        newuser = {
+              cx: x,
+              cy: y,
+              r: 24,
+              fill: 'coral',
+              stroke: 'coral',
+              strokeOpacity: .3,
+              strokeWidth: 10
+            };
+            var circle = paper.circle(c.cx,c.cy,c.r);
 
+            circle.attr(newuser);
+
+$.ajax({
+            type: 'POST',
+            data: newuser,
+            url: '/users/adduser',
+            dataType: 'JSON'
+        }).done(function( response ) {
+
+            // Check for successful (blank) response
+            if (response.msg === '') {
+
+
+            }
+            else {
+
+                // If something goes wrong, alert the error message that our service returned
+                alert('Error: ' + response.msg);
+
+            }
+        });
+    }
+    paper.mouseup(movefunc);
 
     
 };
