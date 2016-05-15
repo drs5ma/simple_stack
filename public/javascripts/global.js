@@ -77,7 +77,7 @@ var i;
 function movefunc(ev, x, y){
         
 
-if(x != NaN && y!=NaN && x!= "NaN" && y!="NaN"){
+if((!isNaN(x)) &&  (!isNaN(y))){
 
         console.log(x);
 
