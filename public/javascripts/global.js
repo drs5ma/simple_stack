@@ -85,7 +85,7 @@ function movefunc(ev, x, y){
               strokeOpacity: .3,
               strokeWidth: 10
             };
-            var circle = paper.circle(c.cx,c.cy,c.r);
+            var circle = paper.circle(newuser.cx,newuser.cy,newuser.r);
 
             circle.attr(newuser);
 
