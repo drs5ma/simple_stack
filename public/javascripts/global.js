@@ -57,7 +57,11 @@ $.ajax({
 
 });
 
+
+
     }
+
+}
 
 
 // Fill table with data
@@ -86,7 +90,7 @@ if(  (!isNaN(x)) &&  (!isNaN(y))   ){
             circle.attr(newuser);
 
 
-        });
+        
 
 
     }
