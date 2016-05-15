@@ -6,6 +6,7 @@ Most importantly they store the x,y coordinates of the circle.
 Upon mouseup, a circle is drawn and stored into the db. 
 
 
+```javascript
 { 
   "_id": { "$oid": "57381512b898ec11007a3522" }, 
   "cx": "1074", 
@@ -16,7 +17,7 @@ Upon mouseup, a circle is drawn and stored into the db.
   "strokeOpacity": "0.3", 
   "strokeWidth": "10" 
 }
-
+```
 
 
 Stitched together from the following tutorials and numerous StackOverflow posts:
