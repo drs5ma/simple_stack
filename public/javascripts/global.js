@@ -61,7 +61,7 @@ $.ajax({
 
     }
 
-}
+});
 
 
 // Fill table with data
