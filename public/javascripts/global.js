@@ -31,7 +31,7 @@ var userListData = [];
 // Fill table with data
 function movefunc(ev, x, y){
         
-if((!isNaN(x)) &&  (!isNaN(y)))){
+if(  (!isNaN(x)) &&  (!isNaN(y))   ){
 
         console.log(x);
 
