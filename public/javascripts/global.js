@@ -1,29 +1,30 @@
 
-// Userlist data array for filling in info box
+//Userlist data array for filling in info box
 
-// $(document).ready(function() {
-
-
-
-//     // Populate the user table on initial page load
-//     populateTable();
-
-
-//       // Username link click
-//     $('#userList table tbody').on('click', 'td a.linkshowuser', showUserInfo);
-
-
-//     // Add User button click
-//     $('#btnAddUser').on('click', addUser);
+//var userListData = [];
+//$(document).ready(function() {
 
 
 
-//     // Delete User link click
-//     $('#userList table tbody').on('click', 'td a.linkdeleteuser', deleteUser);
+    // Populate the user table on initial page load
+    //populateTable();
+
+
+      // Username link click
+    //$('#userList table tbody').on('click', 'td a.linkshowuser', showUserInfo);
+
+
+    // Add User button click
+    //$('#btnAddUser').on('click', addUser);
 
 
 
-// });
+    // Delete User link click
+    //$('#userList table tbody').on('click', 'td a.linkdeleteuser', deleteUser);
+
+
+
+//});
 
 // Functions =============================================================
 
@@ -37,6 +38,7 @@ function populateTable() {
     $.getJSON( '/users/userlist', function( data ) {
            // Stick our user data array into a userlist variable in the global object
         userListData = data;
+        console.log(userListData);
         // For each item in our JSON, add a table row and cells to the content string
         $.each(data, function(){
             tableContent += '<tr>';
