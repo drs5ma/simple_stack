@@ -23,7 +23,10 @@ Upon mouseup, a circle is drawn and stored into the db.
 Stitched together from the following tutorials and numerous StackOverflow posts:
 
 Create a Web App and RESTful API Server Using the MEAN Stack
+
 https://devcenter.heroku.com/articles/mean-apps-restful-api
 
+
 CREATING A SIMPLE RESTFUL WEB APP WITH NODE.JS, EXPRESS, AND MONGODB
+
 http://cwbuecheler.com/web/tutorials/2014/restful-web-app-node-express-mongodb/
