@@ -28,7 +28,6 @@
 
 // Functions =============================================================
 var userListData = [];
-var newlistdata=[];
 
 
 
@@ -84,10 +83,30 @@ if(  (!isNaN(x)) &&  (!isNaN(y))   ){
               strokeOpacity: .3,
               strokeWidth: 10
             };
-        newlistdata.push(newuser);
             var circle = paper.circle(newuser.cx,newuser.cy,newuser.r);
 
             circle.attr(newuser);
+
+            $.ajax({
+            type: 'POST',
+            data: newuser,
+            url: '/users/adduser',
+            dataType: 'JSON'
+        }).done(function( response ) {
+
+            // Check for successful (blank) response
+            if (response.msg === '') {
+
+
+            }
+            else {
+
+                // If something goes wrong, alert the error message that our service returned
+                alert('Error: ' + response.msg);
+
+            }
+
+});
 
 
         
