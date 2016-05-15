@@ -2,7 +2,7 @@
 // Userlist data array for filling in info box
 var userListData = [];
 
-// DOM Ready =============================================================
+
 // $(document).ready(function() {
 
 
