@@ -38,14 +38,21 @@ $(document).ready(function() {
 
 
     // Populate the user table on initial page load
-    populateTable();
+    $.getJSON( '/users/userlist', function( data ) {
+           // Stick our user data array into a userlist variable in the global object
+        userListData = data;
+        // For each item in our JSON, add a table row and cells to the content string
+        
+
+        // Inject the whole content string into our existing HTML table
+    });
     
 
      paper = Snap("#svg");
 
 
 var i;
-console.log("test");
+console.log(userListData);
 for(i=0;i<userListData.length;i+=1){
 
         var c = userListData[i];
