@@ -40,7 +40,23 @@ function populateTable() {
         userListData = data;
         console.log(userListData);
 
+var i;
+    console.log(userListData);
+    for(i=0;i<userListData.length;i+=1){
 
+        var c = userListData[i];
+
+            console.log(c);
+            delete c["_id"];
+
+
+
+        // Circle with 80px radius
+            var circle = paper.circle(c.cx,c.cy,c.r);
+
+            circle.attr(c);
+
+        }
 
 
 
@@ -60,23 +76,7 @@ function populateTable() {
 
 
 
-    var i;
-    console.log(userListData);
-    for(i=0;i<userListData.length;i+=1){
-
-        var c = userListData[i];
-
-            console.log(c);
-            delete c["_id"];
-
-
-
-        // Circle with 80px radius
-            var circle = paper.circle(c.cx,c.cy,c.r);
-
-            circle.attr(c);
-
-        }
+    
 };
 
 
