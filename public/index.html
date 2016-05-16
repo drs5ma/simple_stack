@@ -5,7 +5,7 @@
     <title>express mongodb heroku snap.svg experiment</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="/javascripts/global.js"></script>
-    
+
     <script src="/javascripts/snap.svg-min.js"></script>
 
     <style>
@@ -30,9 +30,11 @@ console.log(daha);
 
 
 var width,height;
-var paper;
 
+
+var paper;
 var background;
+
 var circleGroup;
 
 
@@ -41,12 +43,9 @@ $(document).ready(function() {
     width = window.innerWidth;
     height = window.innerHeight;
 
+    background = Snap("#svg").rect(0,0,width,height).attr({fill:"#000"});
+
     paper = Snap("#svg");
-
-    background = paper.rect(0,0,width,height);
-    background.attr({fill:"#000"});
-
-
 
     paper.mouseup(movefunc);
 
