@@ -25,6 +25,8 @@ console.log(daha);
 
 
 var width,height;
+
+
 window.onresize =  function() {
     width = this.innerWidth;
     height = this.innerHeight;
@@ -37,8 +39,8 @@ var paper;
 
 $(document).ready(function() {
 
-    width = this.innerWidth;
-    height = this.innerHeight;
+    width = window.innerWidth;
+    height = window.innerHeight;
 
     paper = Snap("#svg");
     var background = paper.rect(0,0,width,height);
