@@ -81,6 +81,11 @@ if(  (!isNaN(x)) &&  (!isNaN(y))   ){
             };
             var circle = paper.circle(newuser.cx,newuser.cy,newuser.r);
 
+            circle.click(function(){
+
+                console.log(this.attr("cx"));
+            });
+
             circle.attr(newuser);
 
             $.ajax({
