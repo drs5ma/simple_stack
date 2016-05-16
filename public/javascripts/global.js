@@ -143,7 +143,7 @@ function populateTable() {
 	    delete dbentry['timestamp'];
             circle.attr(dbentry);
 	    circle.attr({
-		    id:String(t)
+		    id:"circle"+String(t)
 			});
 
         }
