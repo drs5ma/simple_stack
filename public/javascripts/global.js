@@ -151,8 +151,8 @@ function populateTable() {
     		});
 
 
-            circleGroup.add(circle);
 
+            
 
 
         }
