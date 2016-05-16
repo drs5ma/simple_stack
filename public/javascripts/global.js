@@ -83,7 +83,10 @@ if(  (!isNaN(x)) &&  (!isNaN(y))   ){
 
             circle.mouseup(function(){
 
-                console.log(this.attr("cx"));
+                console.log(this.attr("timestamp"));
+
+
+
             });
 
             circle.attr(newuser);
@@ -128,7 +131,7 @@ function populateTable() {
 	var i;
     for(i=0;i<userListData.length;i+=1){
 
-        var dbentry = userListData[i];
+            var dbentry = userListData[i];
 
 	//console.log(dbentry);
         //delete dbentry["_id"];
@@ -137,14 +140,20 @@ function populateTable() {
 
         // Circle with 80px radius
             var circle = paper.circle(dbentry.cx,dbentry.cy,dbentry.r);
-
+            
 	    
-	    var t = dbentry.timestamp;
-	    delete dbentry['timestamp'];
+	       var t = dbentry.timestamp;
+	       delete dbentry['timestamp'];
+
             circle.attr(dbentry);
-	    circle.attr({
-		    id:"circle"+String(t)
-			});
+    	    circle.attr({
+    		    id:"timestamp"+String(t)
+    		});
+
+
+            circleGroup.add(circle);
+
+
 
         }
 

@@ -27,7 +27,8 @@ console.log(daha);
 var width,height;
 var paper;
 
-var background ;
+var background;
+var circleGroup;
 
 
 $(document).ready(function() {
@@ -36,8 +37,11 @@ $(document).ready(function() {
     height = window.innerHeight;
 
     paper = Snap("#svg");
+
     background = paper.rect(0,0,width,height);
     background.attr({fill:"#000"});
+
+    circleGroup = paper.g();
 
     paper.mouseup(movefunc);
 
