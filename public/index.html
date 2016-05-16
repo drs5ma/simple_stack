@@ -42,8 +42,8 @@ $(document).ready(function() {
 
     paper = Snap("#svg");
 
-    //background = paper.rect(0,0,width,height);
-    //background.attr({fill:"#000"});
+    background = paper.rect(0,0,width,height);
+    background.attr({fill:"#000"});
 
     circleGroup = paper.g();
 
@@ -60,7 +60,7 @@ window.onresize =  function() {
     width = this.innerWidth;
     height = this.innerHeight;
 
-    //background.attr({width:width,height:height});
+    background.attr({width:width,height:height});
 }
 
 
