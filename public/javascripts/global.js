@@ -83,7 +83,9 @@ if(  (!isNaN(x)) &&  (!isNaN(y))   ){
 
             circle.mouseup(function(){
 
-                 console.log(this.attr("timestamp"));
+
+
+                 console.log(this.attr("cx"),this.attr("cy") );
 
 
 
