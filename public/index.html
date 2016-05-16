@@ -19,7 +19,10 @@ html, body {
     position:fixed; top:0; left:0; height:100%; width:100% 
 }
 
-svg circle rect{
+svg circle{
+     pointer-events:visible;    
+}
+svg rect{
  
      pointer-events:visible;    
 
@@ -51,9 +54,11 @@ $(document).ready(function() {
 
     background = Snap("#svg").rect(0,0,width,height).attr({fill:"#000"});
 
+
     paper = Snap("#svg");
 
-    paper.mouseup(movefunc);
+    background.mouseup(movefunc);
+
 
 
 	populateTable();

@@ -81,13 +81,13 @@ if(  (!isNaN(x)) &&  (!isNaN(y))   ){
             };
             var circle = paper.circle(newuser.cx,newuser.cy,newuser.r);
 
-            // circle.mouseup(function(){
+            circle.mouseup(function(){
 
-            //     console.log(this.attr("timestamp"));
+                 console.log(this.attr("timestamp"));
 
 
 
-            // });
+            });
 
             circle.attr(newuser);
 
