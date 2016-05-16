@@ -121,7 +121,6 @@ if(  (!isNaN(x)) &&  (!isNaN(y))   ){
 function populateTable() {
 
     // Empty content string
-
     // jQuery AJAX call for JSON
     $.getJSON( '/users/userlist', function( data ) {
            // Stick our user data array into a userlist variable in the global object
@@ -169,6 +168,7 @@ function populateTable() {
         //$('#userList table tbody').html(tableContent);
     // });
 
+});
 };
 
 
