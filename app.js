@@ -10,7 +10,7 @@ var monk = require('monk');
 
 
 var mongoURI = 'localhost:27017/nodetest3';
-var db = monk(process.env.MONGODB_URI)  || mongoURI);
+var db = monk(process.env.MONGODB_URI || mongoURI);
 
 
 var routes = require('./routes/index');
