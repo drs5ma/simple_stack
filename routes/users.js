@@ -31,10 +31,12 @@ router.post('/adduser', function(req, res) {
 /*
  * DELETE to deleteuser.
  */
-router.delete('/deleteuser/:id', function(req, res) {
+//router.delete('/deleteuser/:id', function(req, res) {
+router.delete('/deleteuser', function(req, res) {
+
     var db = req.db;
     var collection = db.get('userlist');
-    var userToDelete = req.params.id;
+    //var userToDelete = req.params.id;
     //collection.remove({ '_id' : userToDelete }, function(err) {
 
     collection.remove({ 'cx' : req.body.cx, 'cy' : req.body.cy }, function(err) {
