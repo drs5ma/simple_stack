@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 
 /*
- * GET userlist.
+ * GET userlist. why am i still calling it userlist?? change this tomorrow
  */
 router.get('/userlist', function(req, res) {
     var db = req.db;
