@@ -39,7 +39,8 @@ $(document).ready(function() {
 
 
     paper = Snap("#svg");
-    paper.attr({fill:"#000"});
+    var background = paper.rect(0,0,width,height);
+    background.attr({fill:"#000"});
 
     paper.mouseup(movefunc);
 
