@@ -25,16 +25,9 @@ console.log(daha);
 
 
 var width,height;
-
-
-window.onresize =  function() {
-    width = this.innerWidth;
-    height = this.innerHeight;
-}
-
 var paper;
 
-
+var background ;
 
 
 $(document).ready(function() {
@@ -43,7 +36,7 @@ $(document).ready(function() {
     height = window.innerHeight;
 
     paper = Snap("#svg");
-    var background = paper.rect(0,0,width,height);
+    background = paper.rect(0,0,width,height);
     background.attr({fill:"#000"});
 
     paper.mouseup(movefunc);
@@ -52,9 +45,15 @@ $(document).ready(function() {
 	populateTable();
 
 
-
-
 });
+
+
+window.onresize =  function() {
+    width = this.innerWidth;
+    height = this.innerHeight;
+
+    background.attr({width:width,height:height});
+}
 
 
 
