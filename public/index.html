@@ -10,7 +10,12 @@
     <style>
 
 html, body { 
-	margin:0; padding:0; overflow:hidden }
+	margin:0; padding:0; overflow:hidden;
+    background-color: black;
+}
+
+
+}
 
 svg { position:fixed; top:0; left:0; height:100%; width:100% }
 
@@ -38,8 +43,8 @@ $(document).ready(function() {
 
     paper = Snap("#svg");
 
-    background = paper.rect(0,0,width,height);
-    background.attr({fill:"#000"});
+    //background = paper.rect(0,0,width,height);
+    //background.attr({fill:"#000"});
 
     circleGroup = paper.g();
 
