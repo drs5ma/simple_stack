@@ -84,9 +84,13 @@ if(  (!isNaN(x)) &&  (!isNaN(y))   ){
             circle.mouseup(function(){
 
 
-
                  console.log(this.attr("cx"),this.attr("cy") );
+                this.remove();
 
+                $.ajax({
+            type: 'DELETE',data: {"cx":this.attr("cx"),"cy":this.attr("cy")},
+            url: '/users/deleteuser'
+        });
 
 
             });
@@ -142,7 +146,21 @@ function populateTable() {
         // Circle with 80px radius
             var circle = paper.circle(dbentry.cx,dbentry.cy,dbentry.r);
             
-	    
+	       circle.mouseup(function(){
+
+
+                 console.log(this.attr("cx"),this.attr("cy") );
+                 this.remove();
+
+                 $.ajax({
+            type: 'DELETE',data: {"cx":this.attr("cx"),"cy":this.attr("cy")},
+            url: '/users/deleteuser'
+        });
+
+
+
+
+            });
 	       var t = dbentry.timestamp;
 	       delete dbentry['timestamp'];
 
