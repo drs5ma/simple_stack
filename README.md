@@ -5,11 +5,6 @@ The database consits of a collection of json objects which are the attributes fo
 
 Upon loading the webapp pulls all circles from the database and plots them. Upon clicking the background, a circle is drawn and stored into the db. On circle click, that element is removed from the view and database.
 
-## Next steps include:
-- making the app realtime(socket.io)
-- plot circle on click anywhere, remove all circles new circle overlaps with: crowd sourcing a field of evenly spaced circles
-- making each user unqiue: cookie stored in db: each unique user = differnt color
-- taking advantage of the timestamp upon which element was inserted
 
 ```javascript
 {
@@ -24,7 +19,17 @@ Upon loading the webapp pulls all circles from the database and plots them. Upon
     "strokeWidth": "10"
 }
 ```
+## Next steps include:
+- making the app realtime(socket.io)
+- plot circle on click anywhere, remove all circles new circle overlaps with: c\
+rowd sourcing a field of evenly spaced circles
+- making each user unqiue: cookie stored in db: each unique user = differnt col\
+or
+- taking advantage of the timestamp upon which element was inserted
+- svg element id = mongodb._id
 
+
+Sources:
 
 Stitched together from the following tutorials and numerous StackOverflow posts:
 
