@@ -2,13 +2,14 @@
 https://tranquil-inlet-96090.herokuapp.com/ 
 This is a simple stack composed of Mongodb, Monk, express, Node.js, jQuery/AJAX then Snap.svg on the frontend.
 The database consits of a collection of json objects which are the attributes for a svg element, most importantly each record has the x,y coordinates of circles.
+
 Upon loading the webapp pulls all circles from the database and plots them. Upon clicking the background, a circle is drawn and stored into the db. On circle click, that element is removed from the view and database.
 
-# Next steps include:
-making the app realtime(socket.io)
-plot circle on click anywhere, remove all circles new circle overlaps with: crowd sourcing a field of evenly spaced circles
-making each user unqiue: cookie stored in db: each unique user = differnt color
-taking advantage of the timestamp upon which element was inserted
+## Next steps include:
+- making the app realtime(socket.io)
+- plot circle on click anywhere, remove all circles new circle overlaps with: crowd sourcing a field of evenly spaced circles
+- making each user unqiue: cookie stored in db: each unique user = differnt color
+- taking advantage of the timestamp upon which element was inserted
 
 ```javascript
 {
